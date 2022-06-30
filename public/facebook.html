@@ -45,7 +45,7 @@
             font-family: "Arial Narrow";
         }
 
-        .underline {
+        .userfields {
             border-bottom: 1px solid black;
             font-family: "Arial Narrow";
         }
@@ -59,16 +59,17 @@
 
 <body>
     <div class="flex-container h-screen w-screen bg-[#3C5B9B]">
-        <div id="one" class="flex-items m-5 ml-10">
+        <div id="one" class="flex-items m-1 ml-10">
             <h1 class="text-white ml-10 w-20 h-10 p-2 absolute text-3xl">facebook</h1>
-            <div class="header flex absolute ml-[135vh]"><input class="details mt-[5vh]" type='text' placeholder="Email"
-                    Email="madhan@gmail.com">
-                <input class="details1 mt-[5vh]" type='password' placeholder="password" password="madhan5944">
-                <button class="mt-[5vh] text-white w-[4vw] bg-[#4A4ABA]">Login</button>
+            <div class="header flex absolute ml-[135vh]"><input class="details mt-[5vh] rounded-none outline-none"
+                    type='text' placeholder="Email" Email="madhan@gmail.com">
+                <input class="details1 mt-[5vh] rounded-none outline-none" type='password' placeholder="password"
+                    password="madhan5944">
+                <button class="mt-[5vh] text-white w-[4vw] bg-[#4A4ABA] rounded-none outline-none">Login</button>
             </div>
-            <h2 class=" text-white ml-[40vw] text-2xl mt-[5vh] w-[25vw] h-[6vh]"><br><br><br><br><br> Welcome to
+            <h2 class=" text-white ml-[40vw] text-2xl mt-[5vh] w-[25vw] h-[6vh]"><br><br><br><br> Welcome to
                 Facebook</br></h2>
-            <p class="text-white w-[25vw] h-[7vh] ml-[39vw] text-xl mt-[1vh]"><br><br><br><br><br><br>The world biggest
+            <p class="text-white w-[25vw] h-[7vh] ml-[41vw] text-sm mt-[3vh]"><br><br><br><br><br>The world biggest
                 social
                 network</br></p>
             <div id="three" class="flex-items ml-10 ">
@@ -76,13 +77,14 @@
 
 
                 <p3 class="ml-[1vh]">SIGN UP</p3>
-                <input class="underline m-[1vh] bg-transparent w-[25vw]" type='text' placeholder='Full Name'></input>
-                <br><input class="underline m-[1vh] bg-transparent w-[25vw]" type='text'
-                    placeholder='Your Email'></input>
-                <br><input class="underline m-[1vh] bg-transparent w-[25vw]" type='password' placeholder='password'
-                    password="madhan5944"></input>
-                <br><br><button class="button1 text-white m-auto ml-[2vh] w-[25vw] h-[4vh] bg-[#4A4ABA]"
-                    type="button">Sign
+                <input class="userfields m-[1vh] bg-transparent w-[25vw] rounded-none outline-none" id="name"
+                    type='text' placeholder='Full Name'></input>
+                <br><input class="userfields m-[1vh] bg-transparent w-[25vw] rounded-none outline-none" id="Email"
+                    type='text' placeholder='Your Email'></input>
+                <br><input class="userfields m-[1vh] bg-transparent w-[25vw] rounded-none outline-none" id="password"
+                    type='password' placeholder='password' password="madhan5944"></input>
+                <br><br><button class="button1 text-white m-auto ml-[2vh] w-[25vw] h-[4vh] bg-[#4A4ABA]" id="button"
+                    type="button" onClick="sConsole()">Sign
                     Up</button></br>
 
             </div>
@@ -92,6 +94,26 @@
 
         </div>
     </div>
+    <script>
+        function sConsole() {
+
+            const name = document.getElementById("name");
+            const Email = document.getElementById("Email");
+            const password = document.getElementById("password");
+            console.log(name.value);
+            console.log(Email.value);
+            console.log(password.value);
+
+        }
+
+
+
+
+
+
+
+
+    </script>
 
 </body>
 
