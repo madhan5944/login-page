@@ -1,19 +1,283 @@
-<html>
+<html lang="en">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
 <head>
-    <script type="text/javascript" src="dygraph.js"></script>
-    <link rel="stylesheet" src="dygraph.css" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <link rel="stylesheet" href="css/tailwind.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
 </head>
 
 <body>
-    <svg class="chart"></svg>
-    <script type="text/javascript">
-        g2 = new Dygraph(
-            document.getElementById("graphdiv2"),
-            "temperatures.csv", // path to CSV file
-            {}          // options
-        );
-    </script>
+    <div class="w-[100vw] h-[120vh] ml-1 bg-gray-300/50">
+        <div class=" header  flex">
+            <div class="w-[202px] h-[8.5vh] bg-white">
+                <div class="ml-4 mt-4 text-xl font-bold">STOCKUP<i class="fa-solid fa-grip-lines ml-7"></i></div>
+
+            </div>
+            <div class="w-[73vw] h-[8.5vh] bg-white m-[0.7] mt-0">
+                <div class="ml-8 font-medium">Hi Barly Vallendino,</div>
+                <div class="ml-8 font-medium text-slate-300">Welcome back!</div>
+                <div
+                    class="font-medium  text-center text-sm text-slate-400 absolute top-3 right-80 w-[250px] h-[4vh] bg-gray-100/50">
+                    <i class="fa-solid fa-magnifying-glass"></i> Search all assets
+                </div>
+            </div>
+            <div class="w-[202px] h-[8.5vh] bg-white  text-slate-400 mt-0"><i class="fa-solid fa-bell ml-8 mt-4"></i>
+            </div>
+            <div class=" bg-white text-slate-400"><i class="fa-solid fa-wallet mt-[2vh] ml-[-8vw] text-orange-400 "></i>
+            </div>
+
+        </div>
+        <div class="nav w-[230px] h-[93vh] bg-white mt-0.1">
+            <div class="w-[155px] h-[5vh] bg-blue-700 absolute m-3 mt-[15] rounded-lg">
+                <div class="text-center text-white mt-2 text-sm">Quick Invest</div>
+                <div class="text-slate-300 w-[100px] h-[4vh] mt-10 text-sm ml-[2vw]">MAIN MENU</div>
+                <div class="w-[100px] h-[4vh] text-blue-600 mt-3 text-md  ml-[2vw] "><i
+                        class="fa-solid fa-house p-2"></i>Home
+                </div>
+
+                <div class="w-[100px] h-[4vh]  mt-3 text-md ml-[2vw]"><i
+                        class="fa-solid fa-arrows-rotate p-2 text-slate-400"></i>Exchange
+                </div>
+                <div class="w-[100px] h-[4vh]  mt-3 text-md ml-[2vw]"><i
+                        class="fa-solid fa-square-person-confined p-2 text-slate-400"></i>Portfolios</div>
+                <div class="w-[100px] h-[4vh]  mt-3 text-md ml-[2vw]"><i
+                        class="fa-solid fa-wallet p-2 text-slate-400"></i>Wallets
+                </div>
+                <div class="w-[110px] h-[4vh]  mt-3 text-md ml-[5vw]"><i
+                        class="fa-solid fa-square-poll-vertical ml-[-3vw] p-2 text-slate-400"></i>Market&Price</div>
+                <div class="w-[100px] h-[4vh]  mt-3 text-md ml-[2vw]"><i
+                        class="fa-solid fa-group-arrows-rotate p-2 text-slate-400"></i>Activities
+                </div>
+                <div class="text-slate-300 ml-7 mt-5">SUPPORT</div>
+                <div class="ml-[4vw] mt-[2vh]"><i class="fa-solid fa-users ml-[-2vw] p-1 text-slate-400"></i>Community
+                </div>
+                <div class="ml-[2vw] mt-[2vh] w-[10vw]"><i class="fa-solid fa-phone p-1 text-slate-400"></i>Help &
+                    Support
+                </div>
+                <div class="ml-[2vw] mt-[2vh]"><i class="fa-solid fa-gear p-1 text-slate-400"></i>Settings</div>
+
+            </div>
+
+        </div>
+        <div class="bg-white w-[14.9vw] h-[10vh] m-1">
+            <div class="font-bold ml-[3.5vw] p-1">Barly Vallendito <div
+                    class="font-bold text-slate-700 w-6 h-1 ml-[9vw] mt-[-3.5vh] text-md">. . .</div>
+            </div>
+            <div class="text-slate-400 ml-[3vw] mt-[2vh]">barly@dipainhouse.com</div>
+
+            <div class="w-[100vh] h-[5vh] bg-white absolute inset-x-0 top-0 h-16 ml-[17vw] mt-[10vh]">
+                <div class="ml-4 mt-4 text-sm font-medium">Your Assets.5</div>
+                <div
+                    class="w-[5vw] h-10 text-right text-sm  mt-[-20] ml-[30vw] font-medium w-[4vw] h-[3vh] bg-gray-100/50 text-center rounded-lg">
+                    <i class="fa-solid fa-clock text-slate-400"></i>24h<i
+                        class="fa-solid fa-angle-down ml-[0.5vw] text-slate-400"></i>
+                </div>
+                <div
+                    class="w-[10vw] h-10 text-right text-sm mt-[-1.6vw] ml-[35vw] font-medium w-[10vw] h-[3vh] bg-gray-100/50 text-center rounded-lg">
+                    <i class="fa-solid fa-square-person-confined p-2 text-slate-400"></i>Tradable Assets<i
+                        class="fa-solid fa-angle-down ml-[2] mt-[-1vh] text-slate-400"></i>
+                </div>
+            </div>
+            <div class="bg-gray-200 w-[100vh] h-[5.5vh] absolute inset-x-0 top-0  ml-[17vw] mt-[18.6vh] ">
+                <div class="w-[8vw] h-10 text-slate-400 font-medium ml-3 ">Coin Name</div>
+                <div class="w-[8vw] h-2 text-slate-400 font-medium ml-[50vh] mt-[-37]">Total Balance</div>
+                <div class="w-[8vw] h-2 text-slate-400 font-medium ml-[68vh] mt-[-1.1vh]">Total Coin</div>
+                <div class="w-[3vw] h-1 text-slate-400 font-medium ml-[84vh] mt-[-1.1vh]">Action</div>
+
+            </div>
+            <div class="bg-white w-[100vh] h-[35vh] absolute inset-x-0 top-0  ml-[17vw] mt-[24.3vh] ">
+                <div class=" w-[2vw] h-[2vh] mt-[4vh] ml-[9vh] font-medium"><i
+                        class="fa-brands fa-bitcoin text-lg ml-[-3vw] text-orange-400"></i>
+                    Bitcoin
+                    <div class=" w-[2vw] h-[2vh] text-slate-400 ml-[3vw] mt-[-3vh]">BTC
+                    </div>
+                    <div class="w-[2vw] h-[2vh] ml-[20vw] mt-[-2vh]">$56.962.96</div>
+                    <div class="w-[2vw] h-[2vh] ml-[29vw] mt-[-2vh]">1.73563214</div>
+                    <div class="w-[5vw] h-[4vh] bg-gray-100 ml-[37vw] mt-[-2vh] text-blue-500 rounded-lg text-center">
+                        Buy/Sell
+                    </div>
+                </div>
+                <div class=" w-[2vw] h-[2vh] mt-[4vh] ml-[11vh] font-medium"><i
+                        class="fa-brands fa-ethereum ml-[-3.8vw] text-md rounded-full bg-slate-300"></i>Ethereum
+                    <div class=" w-[2vw] h-[2vh] text-slate-400 ml-[2vw] mt-[-3vh]">ETH
+                    </div>
+                    <div class="w-[2vw] h-[2vh] ml-[19vw] mt-[-2vh]">$20.249.32</div>
+                    <div class="w-[2vw] h-[2vh] ml-[28vw] mt-[-2vh]">9.53707651</div>
+                    <div class="w-[5vw] h-[4vh] bg-gray-100 ml-[36vw] mt-[-2vh] text-blue-500 rounded-lg text-center">
+                        Buy/Sell
+                    </div>
+                </div>
+                <div class=" w-[9vw] h-[2vh] mt-[4vh] ml-[8.6vh] font-medium"><i
+                        class="fa-regular fa-gem ml-[-3.2vw] text-lg text-yellow-300"></i>Binance
+                    Coin
+                    <div class=" w-[2vw] h-[2vh] text-slate-400 ml-[5vw] mt-[-3vh]">BNB
+                    </div>
+                    <div class="w-[2vw] h-[2vh] ml-[20vw] mt-[-2vh]">$14.499.16</div>
+                    <div class="w-[2vw] h-[2vh] ml-[29vw] mt-[-2vh]">46.86120297</div>
+                    <div class="w-[5vw] h-[4vh] bg-gray-100 ml-[37vw] mt-[-2vh] text-blue-500 rounded-lg text-center">
+                        Buy/Sell
+                    </div>
+                </div>
+                <div class=" w-[2vw] h-[2vh] mt-[3vh] ml-[6.5vh] font-medium">
+                    <div class="w-5 h-[0.1vh] ml-[-1.9vw]"><img src="tether--v1 (1).ico"></div>Tether
+                    <div class=" w-[2vw] h-[2vh] text-slate-400 ml-[4vw] mt-[-3vh]">USDT
+                    </div>
+                    <div class="w-[2vw] h-[2vh] ml-[21vw] mt-[-2vh]">$12.259.23</div>
+                    <div class="w-[2vw] h-[2vh] ml-[30vw] mt-[-2vh]">39.62145577</div>
+                    <div class="w-[5vw] h-[4vh] bg-gray-100 ml-[38vw] mt-[-2vh] text-blue-500 rounded-lg text-center">
+                        Buy/Sell
+                    </div>
+                </div>
+                <div class=" w-[2vw] h-[2vh] mt-[3vh] ml-[9vh]  font-medium"><i
+                        class="fa-brands fa-centos ml-[-3vw] text-blue-400"></i>Cardona<div
+                        class=" w-[2vw] h-[2vh] text-slate-400 ml-[3vw] mt-[-3vh]">ADA
+                    </div>
+                    <div class="w-[2vw] h-[2vh] ml-[20vw] mt-[-2vh]">$1.207.76</div>
+                    <div class="w-[2vw] h-[2vh] ml-[29vw] mt-[-2vh]">907.71229207</div>
+                    <div class="w-[5vw] h-[4vh] bg-gray-100 ml-[37vw] mt-[-2vh] text-blue-500 rounded-lg text-center">
+                        Buy/Sell
+                    </div>
+                    <div class="w-[10vw] h-[8vh] bg-white ml-[48vw] mt-[-45vh]">
+                        <div class="text-center text-blue-400">Buy</div>
+                    </div>
+                    <div class="w-[10vw] h-[8vh] bg-white ml-[58.2vw] mt-[-8vh]">
+                        <div class="text-center">Sell</div>
+                    </div>
+                    <div class="w-[20vw] h-[41.2vh] bg-white ml-[48vw] m-0.5 p-2">
+                        <div class="w-[17vw] h-[8vh] border-solid border-2 rounded-lg bg-white ml-[1vw]">
+                            <div class="ml-5 text-slate-400">Coin Name</div>
+                            <div class="ml-[4vw]"><i
+                                    class="fa-brands fa-bitcoin text-lg  text-orange-400 ml-[-2.5vw]"></i>Bitcoin
+                            </div>
+                            <div class="text-slate-400 ml-[6.5vw] mt-[-1.5vw]">BTC <i
+                                    class="fa-solid fa-angle-down ml-[6vw] mt-[-1vh] text-slate-400"></i></div>
+                        </div>
+                        <div class="w-[17vw] h-[8vh] border-solid border-2 rounded-lg bg-white ml-[1vw] mt-4">
+                            <div class="ml-5 text-slate-400">Amount (USD)</div>
+                            <div class="ml-[1.5vw]">$5.696.24</div>
+                            <div class="ml-[14vw] mt-[-4vh] text-green-500">USD</div>
+                        </div>
+                        <div class="w-[17vw] h-[8vh] border-solid border-2 rounded-lg bg-white ml-[1vw] mt-4">
+                            <div class="ml-5 text-slate-400">Amount (BTC)</div>
+                            <div class="ml-[1.5vw]">0.17321536</div>
+                            <div class="ml-[14vw] mt-[-4vh] text-orange-400">BTC</div>
+                        </div>
+                        <div
+                            class="w-[17vw] h-[8vh] border-solid border-2 rounded-lg bg-white ml-[1vw] mt-4 bg-blue-500">
+                            <div class="text-white text-center mt-[2vh]">Buy BTC</div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="container1">
+                    <div class="w-[33vw] h-[45vh] bg-white mt-[11vh] ">
+                        <div class="ml-[1vw] font-medium p-2">Recent Activity</div>
+                        <div
+                            class="ml-[17vw] mt-[-2vw] font-medium w-[7vw] h-[3vh] bg-gray-100/50 text-center rounded-lg">
+                            <i class="fa-solid fa-clock text-slate-400 ml-[-2vw]"></i>Recent<i
+                                class="fa-solid fa-angle-down ml-[0.5vw] text-slate-400"></i>
+                        </div>
+                        <div
+                            class="ml-[25vw] mt-[-1.5vw] font-medium text-blue-500 w-[7vw] h-[3vh] bg-gray-100/50 text-center rounded-lg">
+                            See all</div>
+                        <div class="mt-[3vh]">
+                            <div class="ml-[2vw] text-slate-400 mt-[vh]">JUL<i
+                                    class="fa-solid fa-arrows-rotate p-2 text-slate-400 text-blue-600"></i>
+                            </div>
+                            <div class="ml-[2.3vw] text-sm font-bold">12</div>
+                            <div class="ml-[8vw] mt-[-6vh] font-medium">Bought Bitcoin</div>
+                            <div class="ml-[8vw] text-slate-400">Using Visa Credit****9256</div>
+                            <div class="ml-[24vw] mt-[-6vh] text-green-500">+0.03038000 BTC</div>
+                            <div class="ml-[26.3vw] text-slate-400">+1,000 USD</div>
+                        </div>
+                        <div class="mt-[3vh]">
+                            <div class="ml-[2vw] text-slate-400">JUL<i class="fa-solid fa-paper-plane ml-[0.5vw]"></i>
+                            </div>
+                            <div class="ml-[2.3vw] text-sm font-bold">11</div>
+                            <div class="ml-[8vw] mt-[-6vh] font-medium">Sent Bitcoin</div>
+                            <div class="ml-[8vw] text-slate-400">To Bitcoin address</div>
+                            <div class="ml-[24vw] mt-[-6vh] text-green-500">-0.01517500 BTC</div>
+                            <div class="ml-[27.3vw] text-slate-400">-500 USD</div>
+                        </div>
+                        <div class='mt-[3vh]'>
+                            <div class="ml-[2vw] text-slate-400">JUL<i
+                                    class="fa-solid fa-arrows-rotate p-2 text-slate-400 text-blue-600"></i>
+                            </div>
+                            <div class="ml-[2.3vw] text-sm font-bold">10</div>
+                            <div class="ml-[8vw] mt-[-6vh] font-medium">Bought Bitcoin</div>
+                            <div class="ml-[8vw] text-slate-400">Using Visa Credit****8878</div>
+                            <div class="ml-[25.5vw] mt-[-6vh] text-green-500">+0.04028000</div>
+                            <div class="ml-[26.5vw] text-slate-400">+2000 USD</div>
+                        </div>
+                        <div class='mt-[3vh]'>
+                            <div class="ml-[2vw] text-slate-400">JUL<i class="fa-solid fa-paper-plane ml-[0.5vw] "></i>
+                            </div>
+                            <div class="ml-[2.3vw] text-sm font-bold">9</div>
+                            <div class="ml-[8vw] mt-[-6vh] font-medium">Sent Bitcoin</div>
+                            <div class="ml-[8vw] text-slate-400">To Bitcoin address</div>
+                            <div class="ml-[24vw] mt-[-6vh] text-slate-400">-0.01217500 BTC</div>
+                            <div class="ml-[27.5vw] text-slate-400 ">-920 USD</div>
+                        </div>
+
+                    </div>
+                    <div class="w-[35vw] h-[45vh] bg-white mt-[-45vh] ml-[38vw]">
+                        <div class="p-2 font-medium ml-[1vw]">Cryptocurrency Chart</div>
+                        <div class="ml-[18vw] mt-[-4vh] w-[7vw] h-[3vh] bg-gray-100/50 text-center rounded-lg"><i
+                                class="fa-solid fa-clock text-slate-400"></i>24h<i
+                                class="fa-solid fa-angle-down ml-[0.5vw] text-slate-400"></i>
+                        </div>
+                        <div class="ml-[25vw] mt-[-3vh] w-[7vw] h-[3vh] bg-gray-100/50 text-center rounded-lg"><i
+                                class="fa-brands fa-bitcoin text-lg  text-orange-400 ml-[-1.5]"></i>Bitcoin<i
+                                class="fa-solid fa-angle-down ml-[2] mt-[-1vh] text-slate-400"></i></div>
+                        <div class="mt-[3vh]"><canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+                            <script>
+                                const xValues = [12, 12.5, 13, 13.5, 14, 14.5, 15, 15.5, 16, 16.5, 17, 17.5, 18, 18.5, 19, 19.5, 20, 20.5, 21, 21.5, 22];
+                                const yValues = [0, 0.3, 0.8414709848078965, 0.6, 0.2, 0.1, 0.8, -0.5, -0.2, -0.12, -0.12, -0.21, -0.32, 0.1, 0.6569865987187891, 0.9379999767747389, 0.9893582466233818, 0.7984871126234903, 0.4121184852417566, -0.0751511204618093, -0.5440211108893698];
+                                const values = [12, 15, 18, 21, 6, 9]
+                                new Chart("myChart", {
+                                    type: "line",
+                                    data: {
+                                        labels: xValues,
+                                        datasets: [{
+                                            fill: false,
+                                            pointRadius: 2,
+                                            pointBackgroundColor: "rgb(0,0,255)",
+                                            borderColor: "orange",
+                                            data: yValues
+                                        }]
+                                    },
+                                    options: {
+                                        legend: { display: false },
+                                        scales: {
+                                            xAxis: {
+                                                // The axis for this scale is determined from the first letter of the id as `'x'`
+                                                // It is recommended to specify `position` and / or `axis` explicitly.
+                                                type: 'time',
+                                            }
+                                        }
+                                    }
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
 </body>
+
+</html>
 
 </html>
