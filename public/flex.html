@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Unequal width of Element | Flexbox</title>
+    <style>
+        h1 {
+            color: green;
+        }
+
+        div.flexcontainer {
+            display: flex;
+            min-height: 200px;
+            font-size: 15px;
+        }
+
+        div.columns {
+            flex: 1;
+            padding: 10px;
+
+        }
+
+        div.columns:nth-of-type(even) {
+            flex: 2;
+
+        }
+
+        div.columns:nth-of-type(odd) {
+            background: #85929E;
+            color: white;
+        }
+
+        div.columns:nth-of-type(even) {
+            background: #A5DDEF;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>GeeksforGeeks</h1>
+        <div class="flexcontainer">
+
+            <div class="columns">This is 1st column</div>
+            <div class="columns">This is 2nd column</div>
+            <div class="columns">This is 3rd column</div>
+            <div class="columns">This is 4th column</div>
+
+        </div>
+</body>
+
+</html>
+
+
+
+<div
+    class="bg-white xl:w-[100vh] xl:h-[35vh] lg:w-[100vh] lg:h-[20vh] lg:ml-[15vw] lg:mt-[20vh] absolute inset-x-0 top-0  xl:ml-[17vw] xl:mt-[24.3vh] ">
+    <div class="flex mt-[2vh]">
+        <div class="mt-1 ml-[2vw]"><i class="fa-brands fa-bitcoin text-lg text-orange-400"></i></div>
+        <div class="ml-[1vw]">Bitcoin</div>
+        <div class="ml-[1vw] text-slate-400">BTC</div>
+        <div class="ml-[15vw]">$56.962.96</div>
+        <div class="ml-[3.5vw]">1.73563214</div>
+        <div class="ml-[2.8vw] text-blue-700">Buy/Sell</div>
+    </div>
+    <div class="flex mt-[2vh]">
+        <div class="mt-1 ml-[6vw]"><i
+                class="fa-brands fa-ethereum xl:ml-[-3.8vw] text-md rounded-full bg-slate-300"></i></i>
+        </div>
+        <div class="ml-[-2vw]">Ethereum</div>
+        <div class="ml-[1vw] text-slate-400"> ETH</div>
+        <div class="ml-[13.8vw]">$20.249.32</div>
+        <div class="ml-[3.5vw]">9.53707651</div>
+        <div class="ml-[2.8vw] text-blue-700">Buy/Sell</div>
+    </div>
+    <div class="flex mt-[2vh]">
+        <div class="mt-1 ml-[5.2vw]"><i class="fa-regular fa-gem xl:ml-[-3.2vw] text-lg text-yellow-300"></i>
+        </div>
+        <div class="ml-[-1.2vw]">Binance Coin</div>
+        <div class="ml-[1vw] text-slate-400">BNB</div>
+        <div class="ml-[12.1vw]">$14.499.16</div>
+        <div class="ml-[3.5vw]">46.86120297</div>
+        <div class="ml-[2.3vw] text-blue-700">Buy/Sell</div>
+    </div>
+    <div class="flex mt-[2vh]">
+        <div class="mt-0.4 ml-[1.9vw] w-[1.5vw] h-[1vh]"><img src="tether--v1 (1).ico"></div>
+        <div class="ml-[0.6vw]">Tether</div>
+        <div class="ml-[1vw] text-slate-400">USDT</div>
+        <div class="ml-[14.7vw]">$12.259.23</div>
+        <div class="ml-[3.5vw]">39.62145577</div>
+        <div class="ml-[2.3vw] text-blue-700">Buy/Sell</div>
+    </div>
+    <div class="flex mt-[2vh]">
+        <div class="mt-1 ml-[5.1vw] w-[1.5vw] h-[1vh]"><i class="fa-brands fa-centos xl:ml-[-3vw] text-blue-400"></i>
+        </div>
+        <div class="ml-[-2.5vw]">Cardona</div>
+        <div class="ml-[1vw] text-slate-400">ADA</div>
+        <div class="ml-[14vw]">$1.207.76</div>
+        <div class="ml-[4vw]">907.71229207</div>
+        <div class="ml-[1.8vw] bg-gray-100 text-blue-700 rounded-lg text-center">Buy/Sell</div>
+    </div>
+</div>
